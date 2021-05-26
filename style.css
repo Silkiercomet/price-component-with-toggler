@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+:root{
+    --lightGray:hsl(240, 78%, 98%);
+    --lightGrayBlue: hsl(234, 14%, 74%);
+    --GrayBlue: hsl(233, 13%, 49%);
+    --darkGrayBlue:hsl(232, 13%, 33%);
+    --gradient:linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+}
+html{
+    box-sizing: border-box;
+}
+*,*::before,*::after{
+    box-sizing: inherit;
+}
+body{
+    font-family: 'Montserrat', sans-serif;
+    height: 100vh;
+    background-image: url(images/bg-top.svg),url(images/bg-bottom.svg);
+    background-repeat: no-repeat;
+    background-position-x: right, left;
+    background-position-y: top, bottom;
+    background-blend-mode: multiply;
+    background-color: var(--lightGray);
+}
+/* card header */
+.wrapper{
+    display: grid;
+    width: 100%;
+    place-items: center;
+}
+.header{
+    display: grid;
+    place-items: center;
+}
+.header h1{
+    color: var(--GrayBlue);
+}
+.toggler-content{
+    color: var(--lightGrayBlue);
+    display: flex;
+    align-items: center;
+}
+.card-container{
+    display: flex;
+}
+
+
+/* card header */
+
+/* cards */
+
+.card-container{
+    min-width: 62.5rem;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    place-items: center;
+    margin: 2.5rem 0;
+}
+.card{
+    width: 100%;
+    background-color: white;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    padding:2rem  1rem;
+    -webkit-box-shadow: 2px 4px 15px 0px rgba(0,0,0,0.41); 
+    box-shadow: 2px 4px 15px 0px rgba(0,0,0,0.41);
+    color: var(--darkGrayBlue);
+    
+}
+.price{
+    font-size: 4rem;
+    margin: 1rem 0;
+}
+.card > *{
+    justify-self: center ;
+    text-align: center;
+}
+.detail{
+    border-top: 2px solid var(--lightGray);
+    min-width: 100%;
+    padding: 1rem 5rem;
+    margin: 0;
+}
+.btn{
+    background-image: var(--gradient);
+    text-decoration: none;
+    color: white;
+    width: 100%;
+    text-align: center;
+    padding: 0.7rem 5rem;
+    margin-top: 1.5rem;
+    border-radius: 5px;
+}
+.card-2{
+    background-image: var(--gradient);
+    color:white;
+    height: 110%;
+}
+.card-2 .detail{
+    border-top: 2px solid var(--lightGray);
+}
+.card-2 .btn{
+    background-image: none;
+    background-color: white;
+    color:  hsl(237, 63%, 64%);
+}
+
+/* cards */
+
+/* toggler */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 26px;
+    
+  }
+  
+  .switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+    
+  }
+  
+  .slider2 {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: hsl(223, 50%, 87%);
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider2:before {
+    position: absolute;
+    content: "";
+    height: 22px;
+    width: 22px;
+    left: 4px;
+    bottom: 2px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+    
+  }
+  
+  input:checked + .slider2 {
+    background-image:var(--gradient);
+  }
+  
+  input:focus + .slider2 {
+    box-shadow: 0 0 1px hsl(223, 50%, 87%);
+  }
+  
+  input:checked + .slider2:before {
+    -webkit-transform: translateX(22px);
+    -ms-transform: translateX(22px);
+    transform: translateX(22px);
+  }
+  
+  /* Rounded sliders */
+  .slider2.round {
+    border-radius: 34px;
+  }
+  
+  .slider2.round:before {
+    border-radius: 50%;
+  }
