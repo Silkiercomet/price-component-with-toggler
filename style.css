@@ -28,11 +28,7 @@ body{
     width: 100%;
     place-items: center;
 }
-.header{
-    display: grid;
-    place-items: center;
-}
-.header h1{
+.header {
     color: var(--GrayBlue);
 }
 .toggler-content{
